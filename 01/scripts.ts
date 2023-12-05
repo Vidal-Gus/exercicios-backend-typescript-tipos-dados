@@ -1,4 +1,5 @@
-const usuarios = [
+
+const usuarios: { nome: string, pets: string[] }[] = [
     {
         nome: "João",
         pets: ["Max"],
@@ -21,7 +22,7 @@ const usuarios = [
     },
 ];
 
-const buscarDonoPet = (lista, nomePet) => {
+const buscarDonoPet = (lista: { nome: string, pets: string[] }[], nomePet: string) => {
     let usuarioEncontrado;
 
     for (const usuario of lista) {
@@ -37,4 +38,4 @@ const buscarDonoPet = (lista, nomePet) => {
     }
 }
 
-buscarDonoPet(usuarios, 'Guido');
+buscarDonoPet(usuarios, 'Salsicha');
